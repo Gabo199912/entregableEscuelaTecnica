@@ -164,34 +164,6 @@
                         </children></AnchorPane>
                 </content>
             </Tab>
-            <Tab text="BUSCAR CURSOS">
-                <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="667.0">
-                        <children>
-                            <Button layoutX="321.0" layoutY="205.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="79.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="BUCAR" />
-                            <TableView fx:id="tablaCursos" layoutX="11.0" layoutY="14.0" prefHeight="174.0" prefWidth="555.0" stylesheets="@estilos/estilos-tabla.css">
-                                <columns>
-                                    <TableColumn fx:id="id_curso" prefWidth="42.20001292228699" text="id" />
-                                    <TableColumn fx:id="nombre_curso" prefWidth="133.79998397827148" text="NOMBRE DE CURSO" />
-                                    <TableColumn fx:id="id_maestro" prefWidth="127.40003967285156" text="MAESTRO" />
-                                    <TableColumn fx:id="fecha_inicio" prefWidth="127.40003967285156" text="FECHA INICIO" />
-                                    <TableColumn fx:id="fecha_final" prefWidth="112.0" text="FINALIZACION" />
-                                </columns>
-                            </TableView>
-                            <TextField fx:id="txtEliminarCurso" layoutX="248.0" layoutY="207.0" prefHeight="31.0" prefWidth="61.0">
-                                <font>
-                                    <Font name="Arial" size="16.0" />
-                                </font>
-                            </TextField>
-                            <Label layoutX="153.0" layoutY="214.0" text="INGRESA ID">
-                                <font>
-                                    <Font name="Arial Bold" size="15.0" />
-                                </font>
-                            </Label>
-                            <Button fx:id="btnEliminarCurso" layoutX="415.0" layoutY="205.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="ELIMINAR" />
-                        </children></AnchorPane>
-                </content>
-            </Tab>
         </tabs>
       </TabPane>
    </children>
