@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.escuela.escuelacompleto.Controlador.alumnosControlador">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="128.0" style="-fx-background-color: #252525;">
+         <children>
+            <ImageView fitHeight="69.0" fitWidth="90.0" layoutX="29.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/alumno/imgAlumno.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="11.0" layoutY="135.0" text="GABO APP" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutX="128.0" prefHeight="76.0" prefWidth="548.0" style="-fx-background-color: #3871c1;">
+         <children>
+            <Label layoutX="37.0" layoutY="26.0" text="ALUMNOS" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <TableView layoutX="152.0" layoutY="100.0" prefHeight="281.0" prefWidth="208.0" stylesheets="@estilos/estilos-tabla.css">
+        <columns>
+          <TableColumn prefWidth="102.19998168945312" text="CLASE" />
+          <TableColumn prefWidth="81.0" text="NOTA" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

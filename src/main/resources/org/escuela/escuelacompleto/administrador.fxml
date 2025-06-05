@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="410.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.escuela.escuelacompleto.Controlador.administradorControlador">
+   <children>
+      <AnchorPane prefHeight="410.0" prefWidth="119.0" style="-fx-background-color: #252525;">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="91.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/administrador/imgAdmin.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="133.0" prefHeight="35.0" prefWidth="90.0" text="GABO APP" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="118.0" prefHeight="82.0" prefWidth="612.0" style="-fx-background-color: #3871c1;">
+         <children>
+            <Label alignment="CENTER" layoutX="23.0" layoutY="24.0" prefHeight="35.0" prefWidth="257.0" text="ADMINISTRADORES" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TabPane layoutX="129.0" layoutY="94.0" prefHeight="305.0" prefWidth="591.0" stylesheets="@estilos/estilos-tab-pane.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="CREACION USUARIOS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="9.0" prefHeight="27.0" prefWidth="163.0" text="NOMBRE DE USUARIO">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNombreCreacion" layoutX="173.0" layoutY="10.0" prefHeight="26.0" prefWidth="154.0">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></TextField>
+                        <Label alignment="CENTER" layoutX="326.0" layoutY="9.0" prefHeight="27.0" prefWidth="108.0" text="CONTRASEÑA">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtContraseniaCreacion" layoutX="436.0" layoutY="10.0">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></TextField>
+                        <Label alignment="CENTER" layoutX="331.0" layoutY="47.0" prefHeight="27.0" prefWidth="90.0" text="TELEFONO">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtTelefonoCreacion" layoutX="436.0" layoutY="48.0">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></TextField>
+                        <Label alignment="CENTER" layoutX="88.0" layoutY="47.0" prefHeight="27.0" prefWidth="72.0" text="EMAIL">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtEmailCreacion" layoutX="174.0" layoutY="48.0">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></TextField>
+                        <SplitMenuButton fx:id="splitUsuarios" layoutX="12.0" layoutY="94.0" mnemonicParsing="false" text="usuarios">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#opcionAdministrador" style="-fx-font-family: Arial" text="administrador" />
+                            <MenuItem mnemonicParsing="false" onAction="#opcionAlumno" style="-fx-font-family: Arial" text="alumno" />
+                              <MenuItem mnemonicParsing="false" onAction="#opcionMaestro" style="-fx-font-family: Arial" text="maestro" />
+                          </items>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </SplitMenuButton>
+                        <Button layoutX="124.0" layoutY="181.0" mnemonicParsing="false" onAction="#crearUsuario" prefHeight="35.0" prefWidth="162.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="CREAR USUARIO">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></Button>
+                        <DatePicker fx:id="fechaCreacionUsuario" layoutX="332.0" layoutY="81.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+           <Tab text="CREACION CURSOS">
+              <content>
+                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                       <Label alignment="CENTER" layoutX="5.0" layoutY="9.0" prefHeight="27.0" prefWidth="163.0" text="NOMBRE DEL CURSO">
+                          <font>
+                             <Font name="Arial Bold" size="15.0" />
+                          </font>
+                       </Label>
+                       <TextField fx:id="txtNombreCurso" layoutX="176.0" layoutY="10.0" prefHeight="26.0" prefWidth="190.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font></TextField>
+                       <Label alignment="CENTER" layoutX="5.0" layoutY="53.0" prefHeight="27.0" prefWidth="119.0" text="FECHA INICIO">
+                          <font>
+                             <Font name="Arial Bold" size="15.0" />
+                          </font>
+                       </Label>
+                       <Button fx:id="btnCrearCurso" layoutX="64.0" layoutY="209.0" mnemonicParsing="false" onAction="#CrearCurso" prefHeight="35.0" prefWidth="119.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="CREAR CURSO" />
+                        <Label alignment="CENTER" layoutX="212.0" layoutY="53.0" prefHeight="27.0" prefWidth="163.0" text="FECHA FINALIZACION">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="fechaInicio" layoutX="12.0" layoutY="91.0" onAction="#seteoFechas" />
+                        <DatePicker fx:id="fechaFinal" layoutX="207.0" layoutY="91.0" onAction="#seteoFechas" />
+                        <TableView fx:id="tablaMaestros" layoutX="389.0" layoutY="52.0" prefHeight="200.0" prefWidth="194.0" stylesheets="@estilos/estilos-tabla.css">
+                          <columns>
+                            <TableColumn fx:id="idColumnaMaestros" prefWidth="56.20001220703125" text="ID" />
+                            <TableColumn fx:id="columnaNombreMaestros" prefWidth="132.5999755859375" text="MAESTROS" />
+                          </columns>
+                        </TableView>
+                        <Label alignment="CENTER" layoutX="399.0" layoutY="9.0" prefHeight="27.0" prefWidth="107.0" text="ID MAESTRO">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtIdMaestro" layoutX="516.0" layoutY="10.0" prefHeight="26.0" prefWidth="57.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btnMaestros" layoutX="204.0" layoutY="209.0" mnemonicParsing="false" onAction="#buscarMaestroPorId" prefHeight="35.0" prefWidth="139.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="BUSCAR MAESTRO" />
+                    </children></AnchorPane>
+              </content>
+           </Tab>
+            <Tab text="BUSCAR USUARIOS">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <Button fx:id="btnBuscarPersona" layoutX="321.0" layoutY="205.0" mnemonicParsing="false" onAction="#buscarPersona" prefHeight="34.0" prefWidth="79.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="BUCAR" />
+                        <TableView fx:id="tablaBuscarUsuasrios" layoutX="11.0" layoutY="14.0" prefHeight="174.0" prefWidth="560.0" stylesheets="@estilos/estilos-tabla.css">
+                          <columns>
+                            <TableColumn fx:id="columnaId" prefWidth="42.20001292228699" text="id" />
+                            <TableColumn fx:id="columnaNombre" prefWidth="133.79998397827148" text="MAESTRO/ALUMNO" />
+                              <TableColumn fx:id="columnaTipoUsuario" prefWidth="127.40003967285156" text="TIPO USUARIO" />
+                              <TableColumn fx:id="columnaEmail" prefWidth="137.40005493164062" text="EMAIL" />
+                              <TableColumn fx:id="columnaTelefono" prefWidth="106.79998779296875" text="TELEFONO" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="txtEliminarUsuarios" layoutX="248.0" layoutY="207.0" prefHeight="31.0" prefWidth="61.0">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="153.0" layoutY="214.0" text="INGRESA ID">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnEliminar" layoutX="415.0" layoutY="205.0" mnemonicParsing="false" onAction="#EliminarUsuarios" prefHeight="34.0" prefWidth="90.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="ELIMINAR" />
+                        </children></AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="BUSCAR CURSOS">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="667.0">
+                        <children>
+                            <Button layoutX="321.0" layoutY="205.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="79.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="BUCAR" />
+                            <TableView fx:id="tablaCursos" layoutX="11.0" layoutY="14.0" prefHeight="174.0" prefWidth="555.0" stylesheets="@estilos/estilos-tabla.css">
+                                <columns>
+                                    <TableColumn fx:id="id_curso" prefWidth="42.20001292228699" text="id" />
+                                    <TableColumn fx:id="nombre_curso" prefWidth="133.79998397827148" text="NOMBRE DE CURSO" />
+                                    <TableColumn fx:id="id_maestro" prefWidth="127.40003967285156" text="MAESTRO" />
+                                    <TableColumn fx:id="fecha_inicio" prefWidth="127.40003967285156" text="FECHA INICIO" />
+                                    <TableColumn fx:id="fecha_final" prefWidth="112.0" text="FINALIZACION" />
+                                </columns>
+                            </TableView>
+                            <TextField fx:id="txtEliminarCurso" layoutX="248.0" layoutY="207.0" prefHeight="31.0" prefWidth="61.0">
+                                <font>
+                                    <Font name="Arial" size="16.0" />
+                                </font>
+                            </TextField>
+                            <Label layoutX="153.0" layoutY="214.0" text="INGRESA ID">
+                                <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnEliminarCurso" layoutX="415.0" layoutY="205.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" styleClass="btn-primary" stylesheets="@estilos/estilos-generales.css" text="ELIMINAR" />
+                        </children></AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

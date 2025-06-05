@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.escuela.escuelacompleto.Controlador.maestrosControlador">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="136.0" style="-fx-background-color: #252525;">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="86.0" layoutX="32.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/maestros/imgMaestro.png" />
+               </image></ImageView>
+            <Label layoutX="21.0" layoutY="160.0" text="GABO APP" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+         </children></AnchorPane>
+      <AnchorPane layoutX="136.0" prefHeight="77.0" prefWidth="576.0" style="-fx-background-color: #3871c1;">
+         <children>
+            <Label layoutX="42.0" layoutY="20.0" text="MAESTROS" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="33.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <TabPane layoutX="145.0" layoutY="90.0" prefHeight="293.0" prefWidth="555.0" stylesheets="@estilos/estilos-tab-pane.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="INSERTAR NOTAS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="8.0" prefHeight="223.0" prefWidth="226.0" stylesheets="@estilos/estilos-tabla.css">
+                          <columns>
+                            <TableColumn prefWidth="97.19997787475586" text="ID ALUMNO" />
+                            <TableColumn prefWidth="97.5999755859375" text="NOTA" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="350.0" layoutY="23.0" text="INGRESAR ID">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="459.0" layoutY="19.0" prefHeight="26.0" prefWidth="62.0" promptText="1, 2, ...">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="408.0" layoutY="65.0" text="NOTA">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="460.0" layoutY="61.0" prefHeight="26.0" prefWidth="62.0">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="425.0" layoutY="117.0" mnemonicParsing="false" styleClass="btn-primary" text="AGREGAR NOTA" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

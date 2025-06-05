@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="501.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.escuela.escuelacompleto.Controlador.loginControlador">
+   <children>
+      <ImageView fitHeight="475.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-success">
+         <image>
+            <Image url="@img/login/imgLogin.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="174.0" layoutY="30.0" prefHeight="340.0" prefWidth="286.0" style="-fx-background-color: #fdfdfd;" styleClass="anchor-pane-login">
+         <children>
+            <Label alignment="CENTER" layoutX="83.0" layoutY="32.0" prefHeight="22.0" prefWidth="109.0" text="ingresar">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="98.0" prefHeight="18.0" prefWidth="58.0" text="usuario">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsuario" layoutX="48.0" layoutY="126.0" prefHeight="26.0" prefWidth="193.0" styleClass="borde-datos" />
+            <Label layoutX="81.0" layoutY="182.0" text="contraseña">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtContrasenia" layoutX="48.0" layoutY="208.0" prefHeight="26.0" prefWidth="194.0" styleClass="borde-datos" />
+            <Button fx:id="btnLogin" layoutX="97.0" layoutY="268.0" mnemonicParsing="false" onAction="#verificacionContrasenia" styleClass="btn-primary" text="INGRESAR" />
+            <ImageView fitHeight="26.0" fitWidth="23.0" layoutX="47.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/login/imgUsuario.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="23.0" layoutX="50.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/login/imgContrasenia.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
